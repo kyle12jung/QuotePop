@@ -16,18 +16,20 @@ const person1SubmitButton = document.querySelector('.person-1-submit');
 const finalConversation = document.querySelector('.final-conversation');
 person1SubmitButton.addEventListener('click', () => {
     const text = document.querySelector('#person-1').value
-    finalConversation.innerHTML += `<p>Person 1: ${text}</p>`
-    person1.push(text)
-    console.log(person1)
-    document.querySelector('#person-1').value = ''
+    if (text !== '') {
+        finalConversation.innerHTML += `<p>Person 1: ${text}</p>`
+        person1.push(text)
+        document.querySelector('#person-1').value = ''
+    }
 })
 
 
 const person2SubmitButton = document.querySelector('.person-2-submit');
 person2SubmitButton.addEventListener('click', () => {
     const text = document.querySelector('#person-2').value
-    finalConversation.innerHTML += `<p>Person 2: ${text}</p>`
-    person2.push(text)
-    console.log(person2)
-    document.querySelector('#person-2').value = ''
+    if (text !== '') {
+        finalConversation.innerHTML += `<p>Person 2: ${text}</p>`
+        person2.push(text)
+        document.querySelector('#person-2').value = ''
+    }
 })
