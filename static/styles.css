@@ -1,0 +1,46 @@
+a {
+  margin: auto;
+  width: 50%;
+}
+
+body {
+  margin: 20px;
+}
+
+h1  {
+  color: white;
+  font-size: 84px;
+  text-align: center;
+}
+
+button {
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.left-card {
+  background-color: #BF40BF;
+}
+
+.left-text {
+  padding: 40px 0;
+}
+
+.output {
+  text-align: center;
+  font-size: 64px;
+  padding: 20px 0;
+}
+
+.row {
+  border: 2px solid black;
+}
+
+.col {
+  border: 2px solid black;
+}
+
+#result {
+  font-size: 32px;
+  padding: 20px 0;
+}
