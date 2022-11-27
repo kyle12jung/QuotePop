@@ -51,7 +51,11 @@
 
       <div class="row quote-row">
         <h2>Your Quote:</h2>
-        <p class="output"><i>"Every day we must try again."</i></p>
+        {% if output is not none %}
+              <p class="output"><i>{{ output }}</i></p>
+          {% else %}
+              <p class="output">Nothing lmao</p>
+          {% endif %}
       </div>
     </div>
 
