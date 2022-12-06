@@ -18,6 +18,11 @@
                     }).always(function() {
                         $(".speechTextBtn").html("Click to Start Listening")
                         location.reload()
+                        
+                        $.getJSON('/say',
+                          function(data) {
+                          //do nothing
+                        })
                     })
                     return false;
                 });
