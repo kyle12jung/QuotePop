@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
-from main import speech_to_text
+from main import speech_to_text, speak
 from quote_generator import quote_pop
 
 
@@ -20,4 +20,9 @@ def background_print():
     transcript = transcript.capitalize()
     transcript += "."
     output = quote_pop(transcript)
+    return render_template("hello.html",transcript=transcript, output=output)
+
+@app.route("/say")
+def say_output():
+    speak(output)
     return render_template("hello.html",transcript=transcript, output=output)
